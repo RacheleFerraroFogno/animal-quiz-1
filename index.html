@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Quiz</title>
+	<script src="quizproject.js"></script>
+  <a href="https://coolors.co/bed8b8-64cc37-66c44f-697f50-3b4733"></a>
+	<link rel="stylesheet" type="text/css" href="quizproject.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Averia+Libre:wght@300&family=Londrina+Solid:wght@300&family=Nerko+One&display=swap" rel="stylesheet">
+  <link rel='icon' href='icons/logo.png' type='icons/logo.png'>
+  <link rel="manifest" href="manifest.json">  
+</head>
+<body onLoad="loadQuestion()">
+
+<section id="lightbox" onclick="closeLightBox()">
+   <div id="message">This is the message</div>
+</section>
+
+<main class="grid-container">
+  <div class="title">QUIZ FOR ANIMAL LOVERS</div>
+  <header class="header">
+    
+    <div id="question">The Question</div>
+  </header>
+  
+  <aside class="left">
+    <div>
+      <div class="options" id="a" onclick="markIt('a')">A.</div>
+      <div class="options" id="b" onclick="markIt('b')">B.</div>
+      <div class="options" id="c" onclick="markIt('c')">C.</div>
+      <div class="options" id="d" onclick="markIt('d')">D.</div>
+    </div>
+  </aside> 
+
+  
+  <figure class="right"> <img id="image" src="" alt=""></figure>
+  
+  <footer class="footer1">
+    <p id="hint-el"></p>
+    <div  id="hint" onclick="hint()">Need a hint?</div>
+  </footer>
+  
+  <footer class="footer2">
+    <p>Score:  <span id="score"></span></p>
+  </footer>
+</main>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

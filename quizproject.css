@@ -1,0 +1,265 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Averia Libre", 'Helvetica', 'sans-serif';
+  background-color:#697F50;
+ 
+}
+
+.header,
+.title,
+.left,
+.right,
+.footer1,
+.footer2,
+#a, #b,#c, #d, #e,
+#hint{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 10px;
+}
+
+.grid-container{
+  display: grid;
+  width: 100%;
+  grid-template-areas: 
+      'title'
+      'header' 
+      'left' 
+      'right' 
+      'footer1'
+	    'footer2';    
+}
+
+.title{
+  grid-area: title;
+  font-size: 35px;
+  font-family: "Londrina Solid", 'Georgia', 'Times New Roman';
+  color:#E1C359;
+  text-align: center;
+}
+
+.header{
+  grid-area: header;
+  font-family:'Nerko One', Courier;
+  background-color: #697F50;
+  color:#ffffff;
+  text-align: center;
+  font-size: 20px;
+  line-height: 40px;
+}
+
+#a, #b,#c, #d, #e{
+  font-size: 25px;
+  margin: 10px;
+  background-color: #E1C359;
+  border: 5px solid #E1C359;
+  color:#ffffff;
+  width: 250px;
+  height: 50px;
+  border-radius: 50px;
+  
+}
+
+#a:hover, #b:hover, #c:hover, #d:hover{
+  background-color: #ffffff;
+  border: 5px solid #E1C359;
+  color:#E1C359;
+  font-weight: bold;
+  box-shadow: 5px 5px #4d421175;
+} 
+
+.left{
+  grid-area: left;
+}
+
+.right{
+  grid-area: right;
+}
+
+#image{
+  width: 300px;
+  padding: 10px;
+  border-radius: 40px;
+  border: 5px solid #E1C359;
+}
+
+.footer1{
+  grid-area: footer1;
+}
+
+#hint{
+  background-color:#ffffff;
+  color: #697F50;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 50px; 
+  border: 5px solid #ffffff;
+}
+#hint-el{
+  color: #ffffff;
+  font-size: 20px;
+  width: 200px;
+}
+
+#hint:hover{
+  background-color: #697F50;
+  border: 5px solid #ffffff;
+  color:#ffffff;
+  box-shadow: 5px 5px #595a5975;
+  cursor: pointer;
+}
+
+
+.footer2{
+  font-size: 30px;
+  color:#ffffff;
+  font-weight: bold;
+}
+
+#question{
+  font-size: 2em;
+  font-weight:bold;
+}
+
+.options{
+   font-size:1.5em;
+   padding:0.4em;
+   cursor: pointer;
+}
+
+#lightbox {
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:100%;
+  background-color:#d1b5514d;   
+}
+
+#message {
+    width:80%;
+    font-family: "Londrina Solid";
+    min-width:400px;
+    padding:20px;
+    background-color:#4FCE32;
+    border: 5px solid #ffffff;
+    color:white;
+    text-align:center;
+    font-size:4em;
+    font-weight:bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+@media (min-width: 830px) {
+  body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+ .grid-container {
+  display: grid;
+    width: 1200px;
+    margin: 40px;
+    grid-template-areas: 
+      'title title title title'
+      'header header header header' 
+      'left left right right' 
+      'footer1 footer1 footer2 footer2';
+  }
+  .header,
+  .left,
+  .right,
+  #a,#b,#c,#d,#e,
+  #hint, 
+  .footer1,
+  .footer2{
+    background-color: #ffffff;
+    padding: 10px;
+  }
+  
+
+  .title{
+    grid-area: title;
+  }
+
+  .header{
+    grid-area: header;
+    padding: 40px;
+    color:#697F50;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  
+  #a, #b,#c, #d, #e{
+    border: 5px solid #E1C359;
+    color:#E1C359;
+    width: 250px;
+    height: 80px;
+  }
+  
+  #a:hover, #b:hover, #c:hover, #d:hover{
+    background-color: #E1C359;
+    border: 5px solid #ffffff00 ;
+    color:#ffffff;
+  } 
+  
+  .left{
+    grid-area: left;
+    margin-top: 10px;
+    margin-bottom: 10px; 
+  }
+
+  #hint{
+    margin: 30px;
+    background-color:#697F50;
+    color: #ffffff;
+    width: 200px;
+  }
+
+  #hint:hover{
+    background-color: #ffffff;
+    border: 5px solid #697F50;
+    color:#697F50;
+    box-shadow: 5px 5px #94949475;
+  }
+  #hint-el{
+    color: #697F50;
+  }
+
+  .right{
+    grid-area: right;
+    margin-top: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 10px; 
+  }
+  
+  #image{
+    margin: 20px;
+    width: 350px;
+  }
+  
+  .footer1{
+    padding: 10px;
+    grid-area: footer1;
+    border-bottom-left-radius: 20px;
+    color:#697F50;
+    font-size: 22px;
+
+  }
+  
+  .footer2{
+    grid-area: footer2;
+    border-bottom-right-radius: 20px;
+    color:#697F50;
+  } 
+
+}
